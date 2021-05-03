@@ -14,7 +14,7 @@ Make and execute the mysh binary in order to access the Minishell.
 
 Minishell is developed with C. Minishell is compliant with **EPITECH C / C++ Coding Style**.
 
-## Authors
+## Author
 
 * **Guillaume Terrière** - [GuyomT](https://github.com/GuyomT)
 
