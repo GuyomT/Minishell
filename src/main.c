@@ -23,7 +23,7 @@ void my_prompt(t_list *env, int nb)
     pwd = search_env(env, "PWD");
 
     if (nb == 1)
-        my_putstr("\033[1;32mMinishell 1 by Guyom working... \033[1;0m \n");
+        my_putstr("\033[1;32mMinishell by Guyom working... \033[1;0m \n");
     if (user != NULL || pwd != NULL) {
         my_putstr("\033[1;31m");
         my_putstr("[");
@@ -63,7 +63,7 @@ int main(int argc, char **argv, char **envp)
     while ((fd = read(0, buff, BUFF_SIZE)) > 0) {
         if (fd == BUFF_SIZE) {
             my_putstr("Commands too big !\n");
-            my_putstr("\033[1;32mMinishell 1 stopped... \033[1;0m \n");
+            my_putstr("\033[1;32mMinishell stopped... \033[1;0m \n");
             exit(0);
         }
         buff[fd - 1] = '\0';
@@ -71,6 +71,6 @@ int main(int argc, char **argv, char **envp)
         my_prompt(env, 2);
     }
     close(fd);
-    my_putstr("\033[1;32mMinishell 1 stopped... \033[1;0m \n");
+    my_putstr("\033[1;32mMinishell stopped... \033[1;0m \n");
     return (0);
 }
